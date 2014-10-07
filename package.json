@@ -1,0 +1,21 @@
+{
+  "name": "oo-mat",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec ./test/index.js"
+  },
+  "author": "Bart Van Beurden",
+  "license": "WTFPL",
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BartVanBeurden/node-oo-mat.git"
+  }
+}
