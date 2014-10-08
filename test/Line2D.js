@@ -150,4 +150,35 @@ module.exports = function() {
 		});
 	});
 	
+	// .distanceToVertex()
+	describe(".distanceToVertex()", function() {
+		it("should find the distance to line", function() {
+			assert.equal(Line2D.distanceToVertex(
+				[1, 1], [4, 5], [1, 5]), 2.5);
+		});
+		it("should find the distance to horizontal line", function() {
+			assert.equal(Line2D.distanceToVertex(
+				[1, 1], [5, 1], [3, 3]), 2);
+		});
+		it("should find the distance to vertical line", function() {
+			assert.equal(Line2D.distanceToVertex(
+				[1, 1], [1, 5], [3, 3]), 2);
+		});
+	});
+	
+	// .segmentDistanceToVertex()
+	describe(".segmentDistanceToVertex()", function() {
+		it("should find the distance to segment in other point", function() {
+			assert.equal(Line2D.segmentDistanceToVertex(
+				[1, 1], [4, 5], [1, 5]), 2.5);
+		});
+		it("should find the distance to segment in first point", function() {
+			assert.equal(Line2D.segmentDistanceToVertex(
+				[1, 1], [4, 5], [1, -1]), 2);
+		});
+		it("should find the distance to segment in second point", function() {
+			assert.equal(Line2D.segmentDistanceToVertex(
+				[1, 1], [4, 5], [8, 8]), 5);
+		});
+	});
 };
